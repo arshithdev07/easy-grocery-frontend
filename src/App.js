@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GroceryApp from './components/GroceryApp';
+import { Layout } from 'antd';
+
+const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Header className="ant-layout-header app-header">Easy Grocery </Header>
+        <Content className="app-content">
+          <div className="app-component">
+            <GroceryApp/>
+          </div>
+        </Content>
+        {/* <Footer>Footer</Footer> */}
+      </Layout>
+      
     </div>
   );
 }

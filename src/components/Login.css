@@ -1,0 +1,15 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.login-message {
+    text-align: center;
+    padding: 10px;
+}
+
+.login-submit {
+    background-color: #43B02A;
+    color: white;
+}

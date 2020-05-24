@@ -1,0 +1,62 @@
+.item-list {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 100px 20px 20px 20px;
+}
+
+#overlay {
+    display: block;
+    position: absolute;
+    width: 23%;
+    background-color: lightgray;
+    padding: 18px;
+    opacity: 0.8;
+    z-index: 100;
+  }
+
+.item-row {
+    padding-bottom: 10px;
+}
+
+.item-delete, .item-delete:hover, .item-delete:focus {
+    color: red;
+    border: none;
+}
+
+.current-list-header {
+    width: 79%;
+    position: fixed;
+    z-index: 15;
+    background-color: white;
+}
+
+@media screen and (max-width: 992px) {
+    .current-list-header {
+        width: 90%;
+    }
+    
+  }
+
+.list-title {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.update-action-col {
+    align-self: center;
+}
+
+.add-item, .save-list{
+    margin-left: 10px;
+    border: none;
+}
+
+/* .add-item:hover, .save-list:hover {
+    background-color: #40B1FF;
+    color: white;
+} */
+
+.add-icon, .save-icon {
+    font-size: xx-large;
+    color: #43B02A;
+}
