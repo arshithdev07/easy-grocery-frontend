@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "npm": "6.4.1",
-    "node": "10.15.0" 
+    "node": "10.15.0"
   },
   "dependencies": {
     "@ant-design/icons": "^4.1.0",

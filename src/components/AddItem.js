@@ -45,7 +45,15 @@ class AddItem extends Component {
       };
     
       handleCancel = () => {
-        this.setState({ visible: false });
+        this.props.closeModel(false, false);
+        // this.setState({ 
+        //   ...this.state,
+        //   visible: false,
+        //   groceryItem: {
+        //     ...this.state.groceryItem,
+        //     addAnother: false
+        //   } 
+        // }, this.onReset);
       };
 
       handleChange = (e) => {
@@ -101,6 +109,7 @@ class AddItem extends Component {
         }
         this.setState({
           ...this.state, 
+          disabled: true,
           groceryItem: {
               ...this.state.groceryItem,
               item: '',

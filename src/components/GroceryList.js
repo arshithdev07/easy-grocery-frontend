@@ -107,7 +107,7 @@ class GroceryList extends Component {
         .then((responseData) => {
             console.log("updatedList",responseData);
             message.success("Grocery List has been successfully updated")
-            this.closeAddItemModal();
+            this.closeAddItemModal(this.state.addAnotherItem, this.state.addAnotherItem);
         })
         .catch(err => {
             console.error(err);
@@ -122,11 +122,12 @@ class GroceryList extends Component {
         });
     }
 
-    closeAddItemModal = () => {
+    closeAddItemModal = (visible, addAnother) => {
         console.log("close item model", this.state)
         this.setState({
             ...this.state,
-            addItemVisible: this.state.addAnotherItem
+            addItemVisible: visible,
+            addAnotherItem: addAnother
         });
     }
 
@@ -135,7 +136,7 @@ class GroceryList extends Component {
         
         return (
             <>
-            <AddItem visible={this.state.addItemVisible} addItem={this.addItem.bind(this)}/>
+            <AddItem visible={this.state.addItemVisible} closeModel={this.closeAddItemModal.bind(this)} addItem={this.addItem.bind(this)}/>
             <Row className="current-list-header">
             <MediaQuery minDeviceWidth={992}>
                 <Col span={8}></Col>
